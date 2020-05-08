@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" class="full-height">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @*<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">*@
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet" type="text/css">
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/datatables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="~/lib/mdbootstrap/css/mdb.min.css" rel="stylesheet" />
+    <link href="~/content/site-layoutstyle.css" rel="stylesheet" />
+    <link href="~/Content/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar p-0 bg-transparent" style="height: 2em !important;">
+        <nav class="navbar fixed-top navbar-expand-md bg-transparent" style="height: 5em !important;">
+            <div class="container-fluid navbar-menucontainer">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    @*<span class="navbar-toggler-icon"></span>*@
+                    <i class="fa fa-bars" style="color:black"></i>
+                </button>
+                <div class="navbar-menucontainer-items container-md navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-table"></i>
+                                Dashboard <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="position-fixed sbcontainer">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fas fa-paperclip fa-3x"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <div class="p-4 pt-5">
+                <h1><label class="logo">Selection</label></h1>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a asp-controller="Login" asp-action="Index">Login</a>
+                    </li>
+                    <li class="active">
+                        <a asp-controller="Category" asp-action="Index">Category</a>
+                    </li>
+                    <li class="active">
+                        <a asp-controller="Products" asp-action="Index">Product</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:50685/swagger" target="_blank">Swagger UI</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="content" class="cardfile-container p-4 p-md-4 pt-5">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/lib/datatables/js/jquery.dataTables.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.js"></script>
+    <script src="~/lib/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="~/lib/mdbootstrap/js/mdb.min.js"></script>
+    <script src="~/scripts/site.js"></script>
+    <script src="~/scripts/faculty.js"></script>
+
+    <script>
+
+    </script>
+</body>
+</html>

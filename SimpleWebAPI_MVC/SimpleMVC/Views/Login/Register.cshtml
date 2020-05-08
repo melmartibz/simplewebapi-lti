@@ -1,0 +1,45 @@
+﻿@model User
+
+<form method="post" role="form" class="form-inline">
+    <div class="cardfile-container-details">
+        <div class="row">
+            <div class="col-xl-6 col-md-12">
+                <div class="card card-plain details-container col6-left">
+                    <div class="card-header card-header-primary">
+                        <div class="col-6">
+                            <h4 class="card-title mt-0">Login</h4>
+                        </div>
+                        <div class="col-6" style="padding:0;">
+                            <button asp-action="CreateUser" type="submit"
+                                    class="btn btn-outline-mdb-color waves-effect cardfile-btn cardfile-crudbtn">
+                                <i class="fa fa-save"></i>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group details-form-group">
+                            <div class="details-field col-6 col-md-6 col-sm-12">
+                                <input asp-for="Username"
+                                       placeholder=" " />
+                                <label asp-for="Username"></label>
+                            </div>
+                            <div class="details-field col-6 col-md-6 col-sm-12">
+                                <input asp-for="Password"
+                                       placeholder=" " />
+                                <label asp-for="Password"></label>
+                            </div>
+                        </div>
+                        <div class="form-group details-form-group">
+                            <div class="details-field col-12 col-md-12 col-sm-12">
+                                <input asp-for="Email"
+                                       placeholder=" " />
+                                <label asp-for="Email"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

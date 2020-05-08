@@ -1,0 +1,294 @@
+﻿/*================Cardfile View=======================*/
+.cardfile-container {
+    font-size: 18px !important;
+}
+
+    .cardfile-container .card-header {
+        padding-bottom: 0px !important;
+        text-transform: uppercase;
+    }
+
+    .cardfile-container .card-header-primary {
+        display: inline-flex;
+    }
+
+    .cardfile-container .cardfile-btn {
+        margin-right: 0;
+        float: right;
+        font-size: 18px;
+    }
+
+.cardfile-table {
+}
+
+    .cardfile-table th {
+        padding: 0 !important;
+        text-align: center;
+        border-bottom-color: black;
+        font-size: 16px !important;
+        text-transform: uppercase;
+    }
+
+    .cardfile-table td {
+        padding: 0 !important;
+        font-size: 16px;
+    }
+
+        .cardfile-table td.cftbl-center {
+            text-align: center;
+            padding-top: 5px !important;
+        }
+
+        .cardfile-table td.cftbl-left {
+            text-align: left;
+            padding-left: 5px !important;
+            padding-top: 5px !important;
+        }
+
+        .cardfile-table td.cftbl-right {
+            text-align: right;
+            padding-top: 5px !important;
+        }
+
+.cardfile-container .dataTables_wrapper .row {
+    margin-bottom: 10px;
+}
+
+.cardfile-anchor:hover {
+    color: blue;
+}
+
+.cardfile-container .card-body {
+    margin-bottom: 5px;
+}
+
+/*================List View=====================*/
+.cardfile-container-list {
+    /*background: linear-gradient(-270deg, #ccffcc 0%, #cce6ff 94%);*/
+    margin-left: 10px;
+    min-height: 645px;
+    background: linear-gradient(145deg, #adebad 0%, #cce6ff 75%);
+}
+
+    .cardfile-container-list .cardfile-header {
+        height: 55px;
+    }
+
+    .cardfile-container-list .cardfile-crudbtn {
+        top: -15px;
+        padding: 9px;
+        width: 30%;
+    }
+
+    .cardfile-container-list .cardfile-searchinput {
+        font-size: 18px !important;
+        height: 30px !important;
+    }
+
+    .cardfile-container-list div.dataTables_wrapper div.dataTables_filter {
+        text-align: left;
+    }
+
+        .cardfile-container-list div.dataTables_wrapper div.dataTables_filter input {
+            font-size: 16px;
+            width: 145%;
+            height: auto !important;
+            float: left;
+            margin-left:0;
+        }
+/*================Details View=====================*/
+.cardfile-container-details {
+    width: 100%;
+    margin-left: 10px;
+}
+    /*..details-form .row [class*="col-"] {*/
+    .cardfile-container-details .row {
+        margin-bottom: 10px;
+    }
+
+    .cardfile-container-details .cardfile-crudbtn {
+        height: 30px;
+        padding: 0;
+        width: 40%;
+    }
+
+    .cardfile-container-details .col-full {
+        background: linear-gradient(145deg, #adebad 0%, #cce6ff 65%);
+    }
+
+    .cardfile-container-details .col6-left {
+        background: linear-gradient(-68deg, #cce6ff 0%, #adebad 35%);
+    }
+
+    .cardfile-container-details .col6-right {
+        background: linear-gradient(145deg, #adebad 0%, #cce6ff 35%);
+    }
+
+.details-container {
+    height: 100%;
+}
+
+.details-form-group {
+    margin-bottom: 15px !important;
+}
+
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+.details-field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+    margin: 0 0 0 5px;
+    padding: 0;
+}
+
+    .details-field.col-md-4 {
+        -ms-flex: 0 0 32.333333%;
+        flex: 0 0 32.333333%;
+        max-width: 32.333333%;
+    }
+
+    .details-field.col-md-6 {
+        -ms-flex: 0 0 49%;
+        flex: 0 0 49%;
+        max-width: 49%;
+    }
+
+    .details-field .datetimepicker-input {
+        height: 35px !important;
+    }
+    /**
+* Add a transition to the label and input.
+* I'm not even sure that touch-action: manipulation works on
+* inputs, but hey, it's new and cool and could remove the 
+* pesky delay.
+*/
+    .details-field label, input {
+        /*transition: all 0.2s;*/
+        transition: all 0.0s;
+        touch-action: manipulation;
+    }
+
+    .details-field input {
+        font-size: 1em;
+        border: 0;
+        font-family: inherit;
+        -webkit-appearance: none;
+        border-radius: 0;
+        padding: 0;
+        cursor: text;
+        border: 1px solid #cccccc;
+        margin: 0 0 2px;
+        padding-left: 5px;
+    }
+
+        .details-field input:focus {
+            outline: 0;
+            /*border-bottom: 1px solid #666;*/
+        }
+
+    .details-field label {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: block;
+        font-size: 14px;
+        margin: 0 0 -5px 6px;
+    }
+    /**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+    .details-field input:placeholder-shown + label {
+        cursor: text;
+        max-width: 66.66%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transform-origin: left bottom;
+        transform: translate(0, 2.125rem) scale(1.5);
+    }
+    /**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+    .details-field input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 1em !important;
+        opacity: 0;
+        transition: inherit;
+    }
+
+    .details-field.input::-moz-placeholder { /* Firefox 19+ */
+        font-size: 1em !important;
+        opacity: 0;
+        transition: inherit;
+    }
+
+    .details-field.input:-ms-input-placeholder { /* IE 10+ */
+        font-size: 1em !important;
+        opacity: 0;
+        transition: inherit;
+    }
+
+    .details-field.input:-moz-placeholder { /* Firefox 18- */
+        font-size: 1em !important;
+        opacity: 0;
+        transition: inherit;
+    }
+    /**
+* Show the placeholder when the input is focused.
+*/
+    .details-field input:focus::-webkit-input-placeholder {
+        opacity: 1;
+    }
+    /**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+    .details-field input:not(:placeholder-shown) + label,
+    .details-field input:focus + label {
+        transform: translate(0, 0) scale(1);
+        cursor: pointer;
+    }
+
+/*CSS for bootstrap-select*/
+    /*.details-field .bootstrap-select .btn-light:not([disabled]):not(.disabled):active,
+    .btn-light:not([disabled]):not(.disabled).active,
+    .show > .btn-light.dropdown-toggle {
+        background-color: white !important;
+    }*/
+    .details-field .bootstrap-select .btn-light {
+        background-color: white !important;
+        margin-left: 0.5px;
+        font-size: 17px;
+        padding: 3px 3px 3px 6px;
+        width: 108%;
+    }
+
+    .details-field .bootstrap-select > .dropdown-toggle:after {
+        margin-top: -1px;
+        margin-right: 8px;
+    }
+
+    .details-field .bootstrap-select .dropdown-menu {
+        min-width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-top: 0;
+    }
+
+    .details-field .dropdown-menu .bs-searchbox {
+        padding: 0;
+    }
+
+    .details-field .dropdown-menu .bs-searchbox .form-control {
+        margin-bottom: 0;
+        width: 100%;
+        float: none;
+        border: none;
+    }
+/**************************/
